@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Optimized Title: Targets small business IT needs in your exact region -->
-    <title>Small Business IT Networking Solutions | Blacksburg, Christiansburg & New River Valley | NetPipeline Solutions</title>
+    <title>Small Business IT Networking Solutions | Blacksburg & New River Valley | NetPipeline Solutions</title>
     
     <!-- Meta Description: A concise snippet tailored for local micro-business owners -->
     <meta name="description" content="NetPipeline Solutions provides secure, flat-rate IT network setup, hardware installation, and Wi-Fi solutions for small and micro businesses across Blacksburg, Montgomery County, and the New River Valley.">
     
     <!-- Geographic Metadata -->
     <meta name="geo.region" content="US-VA" />
-    <meta name="geo.placename" content="Blacksburg, Christiansburg, Montgomery County, New River Valley" />
+    <meta name="geo.placename" content="Blacksburg, Montgomery County, New River Valley" />
     
     <!-- Tailwind CSS CDN for modern, rapid styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -275,7 +275,8 @@
                 <p class="text-slate-600 mt-2 text-sm">We'll visit your local office space, evaluate your security weaknesses, and map out a clean hardware solution for free.</p>
             </div>
             
-            <form class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 space-y-4" onsubmit="event.preventDefault(); alert('Lead saved! (This form can link directly to your corporate email or CRM via standard web form handlers).');">
+            <!-- Consolidated form targeting your Formspree endpoint -->
+            <form action="https://formspree.io/f/XXXXXXXX" method="POST" class="bg-white p-6 rounded-lg shadow-sm border border-slate-200 space-y-4">
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Your Name</label>
                     <input type="text" name="name" id="form-name" required class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-500">
@@ -286,12 +287,15 @@
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Email Address</label>
-                    <input type="email" name="email" id="form-email" required class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-500">
+                    <input type="email" name="_replyto" id="form-email" required class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-500">
                 </div>
                 <div>
                     <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Tell us about your current Wi-Fi setup</label>
                     <textarea rows="3" name="message" id="form-message" class="w-full border border-slate-300 rounded px-3 py-2 text-sm focus:outline-none focus:border-blue-500 placeholder-slate-400" placeholder="e.g., Using a generic carrier box, internet drops constantly..."></textarea>
                 </div>
+                
+                <input type="hidden" name="_subject" value="New NetPipeline Audit Request!">
+                
                 <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded transition text-sm shadow">
                     Submit Audit Request
                 </button>
